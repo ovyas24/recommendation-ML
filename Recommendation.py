@@ -75,6 +75,9 @@ def combined_features(row):
 	except:
 		print("Error: ", row)
 
+def getAllMovies():
+    return df[["titles","id"]]
+
 df = pd.read_csv("movie_dataset.csv")
 features = ['keywords', 'cast', 'genres', 'director']
 
