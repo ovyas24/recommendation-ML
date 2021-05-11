@@ -8,7 +8,7 @@ app = Flask(__name__)
 def hello_world():
     return "Hello"
 
-@app.route('/recommend',methods=["POST","GET"])
+@app.route('/recommend',methods=["POST"])
 def recommend():
     req = request.get_json()
     # print(req["movies"])

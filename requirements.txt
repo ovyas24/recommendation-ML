@@ -1,0 +1,17 @@
+click==7.1.2
+Flask==1.1.2
+Flask-RESTful==0.3.8
+gunicorn==20.1.0
+itsdangerous==1.1.0
+Jinja2==2.11.2
+numpy @ file:///C:/ci/numpy_and_numpy_base_1603466732592/work
+numpydoc @ file:///tmp/build/80754af9/numpydoc_1605117425582/work
+pandas @ file:///C:/ci/pandas_1602083338010/work
+requests @ file:///tmp/build/80754af9/requests_1592841827918/work
+scikit-image==0.17.2
+scikit-learn @ file:///C:/ci/scikit-learn_1598377018496/work
+scipy @ file:///C:/ci/scipy_1604596260408/work
+seaborn @ file:///tmp/build/80754af9/seaborn_1600553570093/work
+six @ file:///C:/ci/six_1605187374963/work
+sklearn==0.0
+Werkzeug==1.0.1
