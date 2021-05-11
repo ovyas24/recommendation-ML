@@ -6,9 +6,18 @@ from sklearn.metrics.pairwise import cosine_similarity
 def get_title_from_index(index):
 	return df[df.index == index]["title"].values[0]
 
+def get_formated_data_title(title):
+    data = df[df.title == title][["title","id"]].values[0]
+    data1 = {
+        "id":data[1],
+        "title":data[0]
+    }
+    return data1
+
 def get_relevent_data(index):
     try:
         data =df[df.index == index][["id","title","genres","homepage","runtime","tagline","director"]].values[0]
+        # print("data----",data)
         dataDict = {
             "id":data[0],
             "name":data[1],
@@ -60,7 +69,6 @@ def generateRecomendations(moviesLiked):
         if(len(data)!=0):
             recommendations.append(data)
     newArr = []
-    print(recommendations)
     if(len(recommendations) != 0):
         for ele in recommendations:
             if(len(ele) != 0):
@@ -76,7 +84,16 @@ def combined_features(row):
 		print("Error: ", row)
 
 def getAllMovies():
-    return df[["titles","id"]]
+    moviesNames = df["title"]
+    movies = []
+    for movie in moviesNames:
+        data = get_formated_data_title(movie)
+        movies.append(data)
+
+    all = { 
+        "movies" :  movies
+    }
+    return all
 
 df = pd.read_csv("movie_dataset.csv")
 features = ['keywords', 'cast', 'genres', 'director']

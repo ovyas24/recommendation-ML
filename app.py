@@ -10,7 +10,7 @@ def hello_world():
 
 @app.route('/getMoviesList')
 def allMovies():
-    return getAllMovies()
+    return jsonify(getAllMovies())
 
 @app.route('/recommend',methods=["POST"])
 def recommend():
