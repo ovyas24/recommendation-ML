@@ -8,3 +8,4 @@ numpy
 pandas
 sklearn==0.0
 Werkzeug==1.0.1
+flask_cors
